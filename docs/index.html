@@ -1,0 +1,102 @@
+<!DOCTYPE html><html class="default no-js"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>mmb-scroll - v0.0.1</title><meta name="description" content="Documentation for mmb-scroll - v0.0.1"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><script async src="assets/search.js" id="search-script"></script></head><body><header><div class="tsd-page-toolbar"><div class="container"><div class="table-wrap"><div class="table-cell" id="tsd-search" data-base="."><div class="field"><label for="tsd-search-field" class="tsd-widget search no-caption">Search</label><input type="text" id="tsd-search-field"/></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">mmb-scroll - v0.0.1</a></div><div class="table-cell" id="tsd-widgets"><div id="tsd-filter"><a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a><div class="tsd-filter-group"><div class="tsd-select" id="tsd-filter-visibility"><span class="tsd-select-label">All</span><ul class="tsd-select-list"><li data-value="public">Public</li><li data-value="protected">Public/Protected</li><li data-value="private" class="selected">All</li></ul></div> <input type="checkbox" id="tsd-filter-inherited" checked/><label class="tsd-widget" for="tsd-filter-inherited">Inherited</label><input type="checkbox" id="tsd-filter-externals" checked/><label class="tsd-widget" for="tsd-filter-externals">Externals</label></div></div><a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a></div></div></div></div><div class="tsd-page-title"><div class="container"><h1>mmb-scroll - v0.0.1</h1></div></div></header><div class="container container-main"><div class="row"><div class="col-8 col-content"><div class="tsd-panel tsd-typography">
+<a href="#妈妈帮-scrolljs" id="妈妈帮-scrolljs" style="color: inherit; text-decoration: none;">
+  <h1>妈妈帮 scroll.js</h1>
+</a>
+<p>设置镜像：</p>
+<blockquote>
+<p>npm set registry <a href="http://npm.mmbang.net">http://npm.mmbang.net</a></p>
+</blockquote>
+
+<a href="#发布" id="发布" style="color: inherit; text-decoration: none;">
+  <h3>发布</h3>
+</a>
+<pre><code><span style="color: #001080">yarn</span><span style="color: #000000"> </span><span style="color: #001080">build</span>
+<span style="color: #001080">修改package</span><span style="color: #000000">.</span><span style="color: #001080">json版本号</span>
+<span style="color: #001080">npm</span><span style="color: #000000"> </span><span style="color: #001080">publish</span>
+</code></pre>
+
+<a href="#使用" id="使用" style="color: inherit; text-decoration: none;">
+  <h3>使用</h3>
+</a>
+<p>callback需结合behavior使用 且behavior不为&#39;auto&#39;|&#39;instant&#39;</p>
+
+<a href="#支持属性" id="支持属性" style="color: inherit; text-decoration: none;">
+  <h4>支持属性</h4>
+</a>
+<table>
+<thead>
+<tr>
+<th align="left">key</th>
+<th>description</th>
+<th>default</th>
+<th>type</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>callback</code></td>
+<td>dom滚动完成回调函数</td>
+<td>无</td>
+<td><code>Function</code></td>
+</tr>
+<tr>
+<td align="left"><code>duration</code></td>
+<td>dom滚动持续时间</td>
+<td><code>478</code></td>
+<td><code>Number</code></td>
+</tr>
+<tr>
+<td align="left"><code>behavior</code></td>
+<td>dom滚动速率曲线</td>
+<td>无</td>
+<td><a href="#behavior">behavior</a></td>
+</tr>
+</tbody></table>
+
+<a href="#behavior" id="behavior" style="color: inherit; text-decoration: none;">
+  <h4>behavior</h4>
+</a>
+<table>
+<thead>
+<tr>
+<th align="left">type</th>
+<th>options</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>String</code></td>
+<td><code>linear</code>| <code>ease</code> |<code>ease-in</code>|<code>smooth</code>|<code>ease-in</code>|<code>ease-out</code>|<code>ease-in-out</code>|<code>auto</code>|<code>instant</code></td>
+<td>速率运动方式</td>
+</tr>
+<tr>
+<td align="left"><code>Array</code></td>
+<td>无</td>
+<td>三次赛贝尔曲线如：[0.0, 0.0, 1.0, 1.0]</td>
+</tr>
+</tbody></table>
+
+<a href="#case" id="case" style="color: inherit; text-decoration: none;">
+  <h4>case</h4>
+</a>
+<pre><code class="language-js"><span style="color: #000000">  </span><span style="color: #001080">Element</span><span style="color: #000000">.</span><span style="color: #795E26">scrollTo</span><span style="color: #000000">({</span>
+<span style="color: #000000">    </span><span style="color: #001080">top:</span><span style="color: #000000"> </span><span style="color: #098658">1800</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #001080">behavior:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;ease-in&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #795E26">callback</span><span style="color: #001080">:</span><span style="color: #000000"> </span><span style="color: #0000FF">function</span><span style="color: #000000"> () {</span>
+<span style="color: #000000">      </span><span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;我是Element的回调&#039;</span><span style="color: #000000">)</span>
+<span style="color: #000000">    }</span>
+<span style="color: #000000">  })</span>
+</code></pre>
+
+<a href="#npm" id="npm" style="color: inherit; text-decoration: none;">
+  <h4>npm</h4>
+</a>
+<pre><code><span style="color: #001080">npm</span><span style="color: #000000"> </span><span style="color: #001080">install</span><span style="color: #000000"> --</span><span style="color: #001080">save</span><span style="color: #000000">-</span><span style="color: #001080">dev</span><span style="color: #000000"> </span><span style="color: #001080">mmb</span><span style="color: #000000">-</span><span style="color: #001080">scroll</span>
+<span style="color: #AF00DB">import</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;mmb-scroll&#039;</span>
+</code></pre>
+
+<a href="#cdn" id="cdn" style="color: inherit; text-decoration: none;">
+  <h4>cdn</h4>
+</a>
+<pre><code class="language-javascript"><span style="color: #800000">&lt;script</span><span style="color: #000000"> </span><span style="color: #FF0000">src</span><span style="color: #000000">=</span><span style="color: #A31515">&quot;https://static-mmb.mmbang.info/h5-lib/mmb-scroll/main.a96705911091b7fe19d6.js&quot;</span><span style="color: #800000">&gt;&lt;/script&gt;</span>
+</code></pre>
+</div></div><div class="col-4 col-menu menu-sticky-wrap menu-highlight"><nav class="tsd-navigation primary"><ul><li class="current"><a href="modules.html">Exports</a></li></ul></nav><nav class="tsd-navigation secondary menu-sticky"><ul><li class="tsd-kind-class"><a href="classes/ScrollPolyfill.html" class="tsd-kind-icon">Scroll<wbr/>Polyfill</a></li><li class="tsd-kind-property"><a href="modules.html#default" class="tsd-kind-icon">default</a></li></ul></nav></div></div></div><footer class=""><div class="container"><h2>Legend</h2><div class="tsd-legend-group"><ul class="tsd-legend"><li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li><li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li><li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li></ul></div></div></footer><div class="overlay"></div><script src="assets/main.js"></script></body></html>

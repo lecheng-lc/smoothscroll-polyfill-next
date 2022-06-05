@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>阿斯达</title>
+  <script src="../dist/main.js"></script>
+  <style>
+    *{
+      padding:0;
+      margin:0;
+    }
+    .btn-wrapper{
+      position:fixed;
+      top:0;
+      left:0;
+    }
+    .window-scroll-wrapper{
+      height:100vh;
+      overflow: auto;
+    }
+    .window-scroll-wrapper .section-a {
+      height: 100vh;
+      width: 200vw;
+      background-color: antiquewhite;
+    }
+    .window-scroll-wrapper .section-b {
+      height: 100vh;
+      background-color: aqua;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="scroll-wrapper">
+    <div class="window-scroll-wrapper">
+      <div class="window-scroll section-a">
+      </div>
+      <div class="window-scroll section-b"></div>
+    </div>
+  </div>
+  <div class="btn-wrapper">
+    <div class="window-btn">
+      <button id="window-btn1">Element有回调滚动</button>
+      <button id="window-btn2">Element无回调滚动</button>
+    </div>
+  </div>
+</body>
+<script>
+  document.querySelector('#window-btn1').addEventListener('click', () => {
+    document.querySelector('.window-scroll-wrapper').scrollBy({
+      top: 100,
+      left: 200,
+      behavior: 'ease-in',
+      callback: function () {
+        console.log('我是window的回调')
+      }
+    })
+  })
+  document.querySelector('#window-btn2').addEventListener('click', () => {
+    document.querySelector('.window-scroll-wrapper').scrollBy(0, 100)
+  })
+</script>
+
+</html>

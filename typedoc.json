@@ -1,0 +1,11 @@
+{
+  "entryPoints": [ "./src/index.ts"],
+  "exclude": ["node_moudles"],
+  "tsconfig":"./tsconfig.json",
+  "includeVersion": true,
+  "name": "mmb-scroll",
+  "readme": "./README.md",
+  "excludePrivate": true,
+  "hideGenerator": true,
+  "disableSources": true
+}
