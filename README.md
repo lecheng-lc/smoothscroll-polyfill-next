@@ -1,5 +1,8 @@
 # smoothscroll-polyfill-next
-最初是解决ios不支持scroll-behavior问题。后来发现好多的业务场景中需要一个回调和动画时间，所以fork了smoothscroll-polyfill的库
+最初是解决ios不支持scroll-behavior问题。后来发现好多的业务场景中需要一个回调和动画时间，所以fork了smoothscroll-polyfill的库  
+
+**兼容情况**
+![image](https://pic.cdn.lkxin.cn/uploads/2022/06/05/629c3d63854fd.png)
 
 ### 使用
 callback需结合behavior使用 且behavior不为'auto'|'instant'
@@ -24,11 +27,4 @@ callback需结合behavior使用 且behavior不为'auto'|'instant'
       console.log('我是Element的回调')
     }
   })
-```
-#### npm
-```
-npm install --save-dev mmb-scroll
-import 'mmb-scroll'
-```
-
 
