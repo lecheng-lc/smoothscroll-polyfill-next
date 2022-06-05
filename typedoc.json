@@ -3,7 +3,7 @@
   "exclude": ["node_moudles"],
   "tsconfig":"./tsconfig.json",
   "includeVersion": true,
-  "name": "mmb-scroll",
+  "name": "smoothscroll-polyfill-next",
   "readme": "./README.md",
   "excludePrivate": true,
   "hideGenerator": true,
